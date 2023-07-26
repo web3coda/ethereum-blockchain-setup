@@ -1,0 +1,7 @@
+# Get addresses of created accounts
+
+curl -X POST --data '{"jsonrpc": "2.0","id": 1,"method": "eth_accounts","params": []}'  -H 'Content-Type: application/json' http://localhost:8545
+
+# Get balance of first accounts, replace XXXXXXXXXXXXXXXXXXXXX with account address
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["XXXXXXXXXXXXXXXXXXXXX", "latest"],"id":2}' -H 'Content-Type: application/json' http://localhost:8545
